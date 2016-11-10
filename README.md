@@ -92,13 +92,16 @@ ng serve --host 0.0.0.0 --port 4201 --live-reload-port 49153
 
 ```bash
 ng generate component my-new-component
-ng g component my-new-component # using the alias
+
+# 使用别名
+ng g component my-new-component 
 
 # 组件支持相对路径生成
 
 # 如果在目录中 src/app/feature/ 你运行
 ng g component new-cmp
 # 你的组件将生成在 src/app/feature/new-cmp
+
 # 但如果你要运行
 ng g component ../newer-cmp
 # 你的组件将生成在 src/app/newer-cmp
