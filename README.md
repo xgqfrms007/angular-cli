@@ -7,13 +7,14 @@
 [![devDependency Status][david-dev-badge]][david-dev-badge-url]
 [![npm][npm-badge]][npm-badge-url]
 
-Prototype of a CLI for Angular 2 applications based on the [ember-cli](http://www.ember-cli.com/) project.
+Angular 2应用程序的 CLI 的原型是基于[ember-cli](http://www.ember-cli.com/) 项目的.
 
-## Note
+## 注意
 
-This project is very much still a work in progress.
+这个项目仍然是一个正在进行的工作。
 
-The CLI is now in beta.
+CLI现在处于测试阶段. 
+
 If you wish to collaborate while the project is still young, check out [our issue list](https://github.com/angular/angular-cli/issues).
 
 Before submitting new issues, have a look at [issues marked with the `type: faq` label](https://github.com/angular/angular-cli/issues?utf8=%E2%9C%93&q=is%3Aissue%20label%3A%22type%3A%20faq%22%20).  
@@ -26,12 +27,12 @@ To take advantage of these, your app built with the old beta will need to migrat
 
 You can update your `beta.10` projects to `beta.14` by following [these instructions](https://github.com/angular/angular-cli/wiki/Upgrading-from-Beta.10-to-Beta.14).
 
-## Prerequisites
+## 先决条件
 
 Both the CLI and generated project have dependencies that require Node 4 or higher, together
 with NPM 3 or higher.
 
-## Table of Contents
+## 目录
 
 * [Installation](#installation)
 * [Usage](#usage)
@@ -59,7 +60,7 @@ with NPM 3 or higher.
 
 ## 安装
 
-**BEFORE YOU INSTALL:** please read the [prerequisites](#prerequisites)
+**在安装之前:** 请阅读[先决条件](#prerequisites)
 ```bash
 npm install -g angular-cli
 ```
@@ -77,9 +78,9 @@ ng new PROJECT_NAME
 cd PROJECT_NAME
 ng serve
 ```
-Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+导航到 `http://localhost:4200/`. 如果你更改任何源文件，应用程序将自动重新加载。
 
-You can configure the default HTTP port and the one used by the LiveReload server with two command-line options :
+你可以使用两个命令行选项配置默认HTTP端口和LiveReload服务器使用的端口 :
 
 ```bash
 ng serve --host 0.0.0.0 --port 4201 --live-reload-port 49153
@@ -93,13 +94,14 @@ ng serve --host 0.0.0.0 --port 4201 --live-reload-port 49153
 ng generate component my-new-component
 ng g component my-new-component # using the alias
 
-# components support relative path generation
-# if in the directory src/app/feature/ and you run
+# 组件支持相对路径生成
+
+# 如果在目录中 src/app/feature/ 你运行
 ng g component new-cmp
-# your component will be generated in src/app/feature/new-cmp
-# but if you were to run
+# 你的组件将生成在 src/app/feature/new-cmp
+# 但如果你要运行
 ng g component ../newer-cmp
-# your component will be generated in src/app/newer-cmp
+# 你的组件将生成在 src/app/newer-cmp
 ```
 你可以找到所有可能的蓝图,在下表中:
 
@@ -114,13 +116,13 @@ Interface | `ng g interface my-new-interface`
 Enum      | `ng g enum my-new-enum`
 Module    | `ng g module my-module`
 
-### Generating a route
+### 生成一个路由
 
 Generating routes in the CLI has been disabled for the time being. A new router and new route generation blueprints are coming.
 
 You can read the official documentation for the new Router here: https://angular.io/docs/ts/latest/guide/router.html. Please note that even though route generation is disabled, building your projects with routing is still fully supported.
 
-### Creating a build
+### 创建一个构建
 
 ```bash
 ng build
@@ -128,7 +130,7 @@ ng build
 
 The build artifacts will be stored in the `dist/` directory.
 
-### Build Targets and Environment Files
+### 构建目标和环境文件
 
 `ng build` can specify both a build target (`--target=production` or `--target=development`) and an
 environment file to be used with that build (`--environment=dev` or `--environment=prod`).
@@ -257,20 +259,20 @@ This command pushes the app to the `master` branch on the github repo instead
 of pushing to `gh-pages`, since user and organization pages require this.
 
 
-### Linting and formatting code
+### Linting和格式化代码
 
 You can lint your app code by running `ng lint`.
 This will use the `lint` npm script that in generated projects uses `tslint`.
 
 You can modify the these scripts in `package.json` to run whatever tool you prefer.
 
-### Support for offline applications
+### 支持离线应用程序
 
 **The `--mobile` flag has been disabled temporarily. Sorry for the inconvenience.**
 
 ~~Angular-CLI includes support for offline applications via the `--` flag on `ng new`. Support is experimental, please see the angular/mobile-toolkit project and https://mobile.angular.io/ for documentation on how to make use of this functionality.~~
 
-### Commands autocompletion
+### 命令自动完成
 
 To turn on auto completion use the following commands:
 
@@ -292,7 +294,7 @@ ng completion 1>> ~/.bash_profile 2>>&1
 source ~/.bash_profile
 ```
 
-### Project assets
+### 项目资产
 
 You use the `assets` array in `angular-cli.json` to list files or folders you want to copy as-is when building your project:
 ```json
@@ -302,7 +304,7 @@ You use the `assets` array in `angular-cli.json` to list files or folders you wa
 ]
 ```
 
-### Global styles
+### 全局样式
 
 The `styles.css` file allows users to add global styles and supports
 [CSS imports](https://developer.mozilla.org/en/docs/Web/CSS/@import).
@@ -312,7 +314,7 @@ file instead, and the same applies to `scss/less/styl`.
 
 You can add more global styles via the `apps[0].styles` property in `angular-cli.json`.
 
-### CSS Preprocessor integration
+### CSS预处理器集成
 
 Angular-CLI supports all major CSS preprocessors:
 - sass/scss ([http://sass-lang.com/](http://sass-lang.com/))
@@ -345,7 +347,7 @@ Or set the default style on an existing project:
 ng set defaults.styleExt scss
 ```
 
-### 3rd Party Library Installation
+### 第三方库安装
 
 Simply install your library via `npm install lib-name --save` and import it in your code.
 
@@ -367,7 +369,7 @@ import * as typelessPackage from 'typeless-package';
 typelessPackage.method();
 ```
 
-### Global Library Installation
+### 全局库安装
 
 Some javascript libraries need to be added to the global scope, and loaded as if
 they were in a script tag. We can do this using the `apps[0].scripts` and
@@ -403,7 +405,7 @@ Finally add the Bootstrap CSS to the `apps[0].styles` array:
 Restart `ng serve` if you're running it, and Bootstrap 4 should be working on
 your app.
 
-### Updating angular-cli
+### 更新 angular-cli
 
 To update `angular-cli` to a new version, you must update both the global package and your project's local package.
 
@@ -431,9 +433,9 @@ Carefully read the diffs for each code file, and either accept the changes or in
 You can find more details about changes between versions in [CHANGELOG.md](https://github.com/angular/angular-cli/blob/master/CHANGELOG.md).
 
 
-## Development Hints for hacking on angular-cli
+## 开发提示for hacking on angular-cli
 
-### Working with master
+### 与 master 工作
 
 ```bash
 git clone https://github.com/angular/angular-cli.git
@@ -467,7 +469,7 @@ Please read the official [npm-link documentation](https://www.npmjs.org/doc/cli/
 and the [npm-link cheatsheet](http://browsenpm.org/help#linkinganynpmpackagelocally) for more information.
 
 
-## License
+## 许可
 
 MIT
 
