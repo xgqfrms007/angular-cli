@@ -18,7 +18,7 @@ If you wish to collaborate while the project is still young, check out [our issu
 
 Before submitting new issues, have a look at [issues marked with the `type: faq` label](https://github.com/angular/angular-cli/issues?utf8=%E2%9C%93&q=is%3Aissue%20label%3A%22type%3A%20faq%22%20).  
 
-## Webpack update
+## Webpack 更新
 
 We changed the build system between beta.10 and beta.14, from SystemJS to Webpack.
 And with it comes a lot of benefits.
@@ -57,20 +57,20 @@ with NPM 3 or higher.
 * [Updating angular-cli](#updating-angular-cli)
 * [Development Hints for hacking on angular-cli](#development-hints-for-hacking-on-angular-cli)
 
-## Installation
+## 安装
 
 **BEFORE YOU INSTALL:** please read the [prerequisites](#prerequisites)
 ```bash
 npm install -g angular-cli
 ```
 
-## Usage
+## 用法
 
 ```bash
 ng --help
 ```
 
-### Generating and serving an Angular2 project via a development server
+### 生成和服务Angular2项目,通过一个开发服务器
 
 ```bash
 ng new PROJECT_NAME
@@ -85,9 +85,9 @@ You can configure the default HTTP port and the one used by the LiveReload serve
 ng serve --host 0.0.0.0 --port 4201 --live-reload-port 49153
 ```
 
-### Generating Components, Directives, Pipes and Services
+### 生成组件，指令，管道和服务
 
-You can use the `ng generate` (or just `ng g`) command to generate Angular components:
+你可以使用 `ng generate` (或只是 `ng g`) 命令生成 Angular 组件:
 
 ```bash
 ng generate component my-new-component
@@ -101,9 +101,9 @@ ng g component new-cmp
 ng g component ../newer-cmp
 # your component will be generated in src/app/newer-cmp
 ```
-You can find all possible blueprints in the table below:
+你可以找到所有可能的蓝图,在下表中:
 
-Scaffold  | Usage
+脚手架  | 用法
 ---       | ---
 Component | `ng g component my-new-component`
 Directive | `ng g directive my-new-directive`
@@ -164,7 +164,7 @@ You can also add your own env files other than `dev` and `prod` by doing the fol
 - add `{ "NAME": 'src/environments/environment.NAME.ts' }` to the the `apps[0].environments` object in `angular-cli.json`
 - use them via the `--env=NAME` flag on the build/serve commands.
 
-### Base tag handling in index.html
+### 基本标记处理,在index.html中
 
 When building you can modify base tag (`<base href="/">`) in your index.html with `--base-href your-url` option.
 
@@ -174,12 +174,12 @@ ng build --base-href /myUrl/
 ng build --bh /myUrl/
 ```
 
-### Bundling
+### 捆绑
 
 All builds make use of bundling, and using the `--prod` flag in  `ng build --prod`
 or `ng serve --prod` will also make use of uglifying and tree-shaking functionality.
 
-### Running unit tests
+### 运行单元测试
 
 ```bash
 ng test
@@ -187,7 +187,7 @@ ng test
 
 Tests will execute after a build is executed via [Karma](http://karma-runner.github.io/0.13/index.html), and it will automatically watch your files for changes. You can run tests a single time via `--watch=false` or `--single-run`.
 
-### Running end-to-end tests
+### 运行端到端测试
 
 ```bash
 ng e2e
@@ -197,7 +197,7 @@ Before running the tests make sure you are serving the app via `ng serve`.
 
 End-to-end tests are run via [Protractor](https://angular.github.io/protractor/).
 
-### Proxy To Backend
+### 代理到后端
 Using the proxying support in webpack's dev server we can highjack certain urls and send them to a backend server.
 We do this by passing a file to `--proxy-config`
 
@@ -225,7 +225,7 @@ and then we edit the `package.json` file's start script to be
 
 now run it with `npm start`
 
-### Deploying the app via GitHub Pages
+### 通过 GitHub 页面部署应用程序
 
 You can deploy your apps quickly via:
 
